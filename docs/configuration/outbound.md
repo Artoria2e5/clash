@@ -356,15 +356,15 @@ The request sent to this proxy group will be relayed through the specified proxy
 
 ### url-test
 
-Clash benchmarks each proxy servers in the list, by sending HTTP HEAD requests to a specified URL through these servers periodically. It's possible to set a maximum tolerance value, benchmarking interval, and the target URL.
+Clash benchmarks each proxy servers in the list, by sending HTTP HEAD requests to a specified URL through these servers periodically. It's possible to set a tolerance value (for jitters), benchmarking interval, and the target URL.
 
 ### fallback
 
-Clash periodically tests the availability of servers in the list with the same mechanism of `url-test`. The first available server will be used.
+Clash periodically tests the availability of servers in the list with the same mechanism of `url-test` (all values except "tolerance" are available). The first available server will be used.
 
 ### load-balance
 
-The request to the same eTLD+1 will be dialed with the same proxy.
+The request to the same eTLD+1 will be dialed with the same proxy. Again the same mechanism is used, except "tolerance" is meaningless.
 
 ### select
 
